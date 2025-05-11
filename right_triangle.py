@@ -35,3 +35,19 @@ class Right_Triangle(Shape):
         if value < 0:
             raise ValueError("Precision must be a non-negative integer")
         self._precision = value
+
+    def __float__(self):
+        return self.area()
+
+    def __int__(self):
+        return int(self.area())
+
+    def __add__(self, other):
+        if not isinstance(other, Right_Triangle):
+            raise TypeError("Can only add right triangle to Right Triangle")
+        new_base_width = self._base_width+ other._base_width
+        new_height = self._height + other._height
+        return Right_Triangle(new_base_width, new_height, self.precision)
+
+    def __str__(self):
+        return f"Right Triangle with  {str(self._base_width)}  and height {str(self._height)} area is  {str(self.area())}"
