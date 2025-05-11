@@ -43,3 +43,20 @@ class Trapezoid(Shape):
         if value < 0:
             raise ValueError("Precision must be a non-negative integer")
         self._precision = value
+
+    def __float__(self):
+        return self.area()
+
+    def __int__(self):
+        return int(self.area())
+
+    def __add__(self, other):
+        if not isinstance(other, Trapezoid):
+            raise TypeError("Can only add trapezoid to Trapezoid")
+        new_a = self._a+ other._a
+        new_b = self._b + other._b
+        new_height = self._height + other._height
+        return Trapezoid(new_a,new_b,new_height, self.precision)
+
+    def __str__(self):
+        return f"Trapezoid with a side  {str(self._a)} b side {str(self._b)}  and height {str(self._height)} area is  {str(self.area())}"
