@@ -3,9 +3,9 @@ from shape import Shape
 class Right_Triangle(Shape):
 
     def __init__(self, base_width,height,precision=4):
-        self._base_width = base_width
-        self._height = height
-        self._precision = precision
+        self.base_width = base_width
+        self.height = height
+        self.precision = precision
 
     def area(self):
         return round(1/2*self._base_width * self._height, self._precision)

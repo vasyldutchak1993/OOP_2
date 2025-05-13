@@ -6,8 +6,8 @@ from shape import Shape
 class Circle(Shape):
 
     def __init__(self, radius, precision=4):
-        self._radius = radius
-        self._precision = precision
+        self.radius = radius
+        self.precision = precision
 
     def area(self):
         return round(math.pi * self._radius * self._radius,self.precision)

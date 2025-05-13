@@ -2,10 +2,10 @@ from shape import Shape
 
 class Trapezoid(Shape):
     def __init__(self, a, b, height, precision=4):
-        self._a = a
-        self._b = b
-        self._height = height
-        self._precision = precision
+        self.a = a
+        self.b = b
+        self.height = height
+        self.precision = precision
 
     def area(self):
         return round(0.5 * (self._a + self._b) * self._height, self._precision)

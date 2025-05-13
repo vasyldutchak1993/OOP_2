@@ -24,7 +24,7 @@ class Rectangle(Shape):
 
     @height.setter
     def height(self, height):
-        self._height = height
+        self.height = height
 
     def __float__(self):
         return self.area()
