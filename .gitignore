@@ -175,3 +175,6 @@ cython_debug/
 
 #idea foldelrs
 .idea
+
+#tmp text files
+*.txt
