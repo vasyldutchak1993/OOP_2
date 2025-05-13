@@ -1,6 +1,4 @@
-from task_3.rectangle import Rectangle
 from task_3.shape import Shape
-from task_3.сircle import Circle
 
 
 class Square(Shape):
